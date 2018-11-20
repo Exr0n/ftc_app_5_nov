@@ -163,6 +163,10 @@ public class livi_auto extends LinearOpMode {
         //Unhooking the robot.
         raiseRackPinionMotor(5, 1);
         backward(1, 1);
+        turnLeft(2.5, 1);
+        forward(1, 1);
+        turnLeft(0.5, 1);
+        forward(3, 1);
         lowerRackPinionMotor(5, 1);
 
         //jewel(5); not used right now
