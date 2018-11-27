@@ -113,6 +113,12 @@ public class LiviVuforia extends LinearOpMode {
         VuforiaTrackable blueTarget  = stonesAndChips.get(1);
         blueTarget.setName("BlueTarget");  // Chips
 
+        VuforiaTrackable frontTarget  = stonesAndChips.get(2);
+        blueTarget.setName("FrontTarget");  // Chips
+
+        VuforiaTrackable backTarget  = stonesAndChips.get(3);
+        blueTarget.setName("BackTarget");  // Chips
+
         /** For convenience, gather together all the trackable objects in one easily-iterable collection */
         List<VuforiaTrackable> allTrackables = new ArrayList<VuforiaTrackable>();
         allTrackables.addAll(stonesAndChips);
