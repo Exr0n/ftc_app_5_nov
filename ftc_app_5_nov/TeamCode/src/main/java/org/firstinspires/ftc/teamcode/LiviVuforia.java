@@ -109,10 +109,10 @@ public class LiviVuforia extends LinearOpMode {
          */
         VuforiaTrackables stonesAndChips = this.vuforia.loadTrackablesFromAsset("StonesAndChips");
         VuforiaTrackable redTarget = stonesAndChips.get(0);
-        redTarget.setName("RedTarget");  // Stones
+        redTarget.setName("StoneTarget");  // Stones
 
         VuforiaTrackable blueTarget  = stonesAndChips.get(1);
-        blueTarget.setName("BlueTarget");  // Chips
+        blueTarget.setName("ChipTarget");  // Chips
 
         /** For convenience, gather together all the trackable objects in one easily-iterable collection */
         List<VuforiaTrackable> allTrackables = new ArrayList<VuforiaTrackable>();
@@ -194,7 +194,7 @@ public class LiviVuforia extends LinearOpMode {
                         AxesReference.EXTRINSIC, AxesOrder.XZX,
                         AngleUnit.DEGREES, 90, 90, 0));
         redTarget.setLocation(redTargetLocationOnField);
-        RobotLog.ii(TAG, "Red Target=%s", format(redTargetLocationOnField));
+        RobotLog.ii(TAG, "StoneTarget=%s", format(redTargetLocationOnField));
 
         /*
          * To place the Stones Target on the Blue Audience wall:
@@ -210,7 +210,7 @@ public class LiviVuforia extends LinearOpMode {
                         AxesReference.EXTRINSIC, AxesOrder.XZX,
                         AngleUnit.DEGREES, 90, 0, 0));
         blueTarget.setLocation(blueTargetLocationOnField);
-        RobotLog.ii(TAG, "Blue Target=%s", format(blueTargetLocationOnField));
+        RobotLog.ii(TAG, "ChipTarget=%s", format(blueTargetLocationOnField));
 
         /**
          * Create a transformation matrix describing where the phone is on the robot. Here, we
